@@ -15,6 +15,14 @@
 			"problemMatcher": [],
 			"label": "npm: watch",
 			"detail": "webpack --mode development --watch"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "webpack --mode production && prettier --print-width=120 --parser html --write dist/*.html"
 		}
 	]
 }
