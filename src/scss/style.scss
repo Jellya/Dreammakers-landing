@@ -45,9 +45,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 body {
   font-family: $font-stack;
   color: #717784;
+  position: relative;
   .container {
    margin: 0 auto;
-   width: 1100px;
+   width: 1080px;
+   position: relative;
+
   }
   a {
 	color: #717784;
@@ -60,6 +63,10 @@ body {
 	background-color:#9B9BCA;
 	border-radius: 10px;
 	color: white;
+	transition: 0.4s ease-in;
+		&:hover {
+			background-color:#7e7eaf;
+	}
   }
 }
 
@@ -127,6 +134,64 @@ body {
 	}
 }
 
+footer {
+	.footer {
+		display: flex;
+		flex-direction: column;
+		&-back {
+			height: 500px;
+			background-image: url(../img/footer.png);
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		&-nav {
+		padding-top: 177px;
+		display: flex;
+		justify-content: space-around;
+			&__column {
+			display: flex;
+			flex-direction: column;
+			}
+			&__title {
+			font-size: 20px;
+			font-weight:400;
+			padding-bottom: 12px;
+				a{
+				color:white;
+				}
+			}
+			&__item a{
+			font-size: 16px;
+			color:#E5E5E5;
+			font-weight:Regular;
+			}
+		}
+		&-bottom {
+			margin-top: 77px;
+			height: 40px;
+			color: white;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			
+		}
+		&-copyright {
+			font-weight:light;
+		}
+		&-social {
+			width: 170px;
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+			left: 180px;
+		}
+		&-logo {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
 
 .service {
 	&-disc {
@@ -146,13 +211,16 @@ body {
 	}
 	&-cards {
 		margin-top: 140px;
+		min-width: 260px;
 		display: flex;
+		flex-flow: row wrap;
+		justify-content:center;
 		&__item {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			padding: 5px 20px;
-			width: 275px;
+			width: 260px;
 			text-align: center;
 			border-radius: 5px;
 			transition: 0.3s;
@@ -218,65 +286,94 @@ body {
 	}
 }
 
-
-footer {
-	.footer {
+.FAQ {
+	display: flex;
+	padding-top: 250px;
+	flex-flow: row wrap;
+	justify-content: center;
+	color: #402B2B;
+	&__column {
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		
-		&-back {
-			height: 500px;
-			background-image: url(../img/footer.png);
-			background-position: 0 0;
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-		}
-		&-nav {
-		padding-top: 177px;
-		display: flex;
-		justify-content: space-around;
-			&__column {
-			display: flex;
+		padding: 0 15px;
+		width: 50%;
+		&:nth-child(2) {
+			padding-top: 600px;
 			flex-direction: column;
-			}
-			&__title {
-			font-size: 20px;
-			font-weight:400;
-			padding-bottom: 12px;
-				a{
-				color:white;
-				}
-			}
-			&__item a{
-			font-size: 16px;
-			color:#E5E5E5;
-			font-weight:Regular;
-			}
-		}
-		&-bottom {
-			margin-top: 77px;
-			height: 40px;
-			color: white;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			
-		}
-		&-copyright {
-			font-weight:light;
-		}
-		&-social {
-			width: 170px;
-			display: flex;
-			justify-content: space-between;
-			position: relative;
-			left: 180px;
-		}
-		&-logo {
-			display: flex;
-			align-items: center;
 		}
 	}
+	&__title {
+		font-family: 'PT Serif', serif;
+		font-size: 48px;
+		margin: 70px 0;
+		line-height: 140%;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-right: 15px;
+		margin-bottom: 12px;
+	}
 
+	&__answ {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease-out;
+		border-radius: 10px;
+		background-color: #f5f5ff;
+		box-shadow: 0 25px 60px rgba($color: #BFBFEC, $alpha: 0.7);
+			p {
+				padding: 35px;
+				
+			}
+	}
+	&__quest {
+		text-align: left;
+		z-index: 5;
+		padding: 35px ;
+		font-size: 18px;
+		border-radius: 23px;
+		background-color: white;
+		box-shadow: 0 5px 10px rgba($color: #E0E0E0, $alpha: 0.7);
+		&:after {
+			content: '\276F';
+			transition: transform 0.4s ease-out;
+			color: #777;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+	}
+	.active {
+		&:after {
+		content: '\276F';
+		transform: rotate(90deg);
+		}
+	}
+	&__image {
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		width: 530px;
+		height: 730px;
+	}
+	&__button {
+		margin: 100px 15px 50px 15px;
+		&.btn a{
+			 padding: 30px 225px;
+			 font-weight: 500;
+			 font-size: 26px;
+		 }
+	}
+}
 
+.background-faq	{
+	position: absolute;
+	padding-top: 150px;
+	right: 0;
+	z-index: -2;
+	width: 50vw;
+	overflow: hidden;
 }
