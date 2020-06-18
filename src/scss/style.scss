@@ -356,13 +356,13 @@ footer {
 		position: absolute;
 		top: 0;
 		z-index: -1;
-		width: 530px;
+		width: 110%;
 		height: 730px;
 	}
 	&__button {
 		margin: 100px 15px 50px 15px;
 		&.btn a{
-			 padding: 30px 225px;
+			 padding: 25px 215px;
 			 font-weight: 500;
 			 font-size: 26px;
 		 }
@@ -371,9 +371,85 @@ footer {
 
 .background-faq	{
 	position: absolute;
-	padding-top: 150px;
+	margin-top: 150px;
 	right: 0;
 	z-index: -2;
 	width: 50vw;
 	overflow: hidden;
+}
+
+.background-features {
+	margin-top: 420px;
+	position: absolute;
+	z-index: -2;
+	left: 0;
+}
+
+.features {
+	display: flex;
+	flex-direction: column;
+	&-disc {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 180px;
+		&:nth-child(3) {
+			margin-top: 240px;
+			margin-bottom: 100px;
+			align-self: flex-end;
+		}
+		&__title {
+			font-size: 26px;
+			font-weight: 500;
+		}
+		&__text {
+			margin-top: 15px;
+			text-align: center;
+			width: 660px;
+		}
+	}
+	&-cards {
+		margin-top: 100px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		flex-flow: row wrap;
+		&__item {
+			margin-top: 60px;
+			width: 475px;
+			display: flex;
+			flex-direction: column;
+			padding: 60px 60px;
+			box-shadow: 0 20px 30px rgba($color: #000000, $alpha: 0.1), 0 -1px 3px rgba($color: #000000, $alpha: 0.2);
+			background: #fff;
+			border-radius: 10px;
+			position: relative;
+		}
+		&__title {
+			margin-top: 50px;
+			font-size: 26px;
+			font-weight: 700;
+			color:black;
+		}
+		&__text {
+			margin-top: 20px;
+			margin-bottom: 45px;
+		}
+		&__button1,&__button2 {
+			position: absolute;
+			left: 25%;
+			bottom: -15px;
+		}
+		&__button2 {
+			&.btn a{
+			background-color: #F01F35;
+				&:hover {
+					background-color: rgba($color: #d1182a, $alpha: 1.0);
+				}
+			}
+		}
+	}
+
 }
