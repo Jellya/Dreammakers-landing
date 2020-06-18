@@ -54,6 +54,10 @@ body {
   }
   a {
 	color: #717784;
+	transition: ease-in 0.3s;
+	&:hover {
+		color: rgba($color: #3d3d3d, $alpha: 1);
+	}
   }
   .btn a{
 	height: 60px;
@@ -107,6 +111,7 @@ body {
 		align-items: center;
 			&__link {
 				padding: 0 30px;
+			
 			}
 
 			&__botton a{
@@ -157,14 +162,15 @@ footer {
 			font-size: 20px;
 			font-weight:400;
 			padding-bottom: 12px;
-				a{
-				color:white;
-				}
+			color:white;
 			}
 			&__item a{
 			font-size: 16px;
 			color:#E5E5E5;
-			font-weight:Regular;
+			transition: ease-in 0.3s;
+			   &:hover {
+			   color: rgba($color: #646464, $alpha: 1);
+			   }
 			}
 		}
 		&-bottom {
@@ -177,7 +183,7 @@ footer {
 			
 		}
 		&-copyright {
-			font-weight:light;
+			font-weight:300;
 		}
 		&-social {
 			width: 170px;
@@ -185,6 +191,11 @@ footer {
 			justify-content: space-between;
 			position: relative;
 			left: 180px;
+			&__item{
+			svg:hover circle{
+				fill: rgba($color: #d3cada, $alpha: 1);
+			}
+			}
 		}
 		&-logo {
 			display: flex;
@@ -202,7 +213,7 @@ footer {
 		justify-content: center;
 		&__title {
 			font-size: 26px;
-			font-weight: medium;
+			font-weight: 500;
 		}
 		&__text {
 			margin-top: 15px;
@@ -234,7 +245,7 @@ footer {
 		&__title {
 			width: 100%;
 			font-size: 22px;
-			font-weight: Medium;
+			font-weight: 500;
 		}
 		&__text {
 			width: 100%;
@@ -255,7 +266,7 @@ footer {
 		padding-right: 20px;
 		&__title {
 			font-size: 26px;
-			font-weight: Medium;
+			font-weight: 500;
 		}
 		&__text {
 			width: 450px;
@@ -341,7 +352,7 @@ footer {
 			content: '\276F';
 			transition: transform 0.4s ease-out;
 			color: #777;
-			font-weight: bold;
+			font-weight: 400;
 			float: right;
 			margin-left: 5px;
 		}
