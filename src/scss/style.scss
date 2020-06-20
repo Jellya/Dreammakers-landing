@@ -309,9 +309,14 @@ footer {
 .FAQ {
 	display: flex;
 	padding-top: 250px;
-	flex-flow: row wrap;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	color: #402B2B;
+	&__base {
+		display: flex;
+		flex-direction: row
+	}
 	&__column {
 		position: relative;
 		display: flex;
@@ -319,8 +324,18 @@ footer {
 		padding: 0 15px;
 		width: 50%;
 		&:nth-child(2) {
-			padding-top: 600px;
+			padding-top: 380px;
 			flex-direction: column;
+		}
+	}
+	&__loadmore {
+		max-height: 0;
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		transition: max-height 3s ease-out;
+		.FAQ__column:last-child {
+			padding-top: 0;
 		}
 	}
 	&__title {
@@ -362,12 +377,12 @@ footer {
 			float: right;
 			margin-left: 5px;
 		}
+		&.active {
+			&:after {
+			content: '\276F';
+			transform: rotate(90deg);
+			}
 	}
-	.active {
-		&:after {
-		content: '\276F';
-		transform: rotate(90deg);
-		}
 	}
 	&__image {
 		position: absolute;

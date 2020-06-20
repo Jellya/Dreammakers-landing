@@ -93,25 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
-var acc = document.getElementsByClassName("FAQ__quest");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var answer = this.nextElementSibling;
-    if (answer.style.maxHeight) {
-        answer.style.maxHeight = null;
-    } else {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-    } 
-  });
-}
-
-$(document).ready(function(){
-  $('.features-feedback').slick({});
-});
+throw new Error("Module parse failed: Unexpected token (33:3)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| $(document).ready(function(){\n|   $('.features-feedback').slick({});\n> });");
 
 /***/ }),
 
