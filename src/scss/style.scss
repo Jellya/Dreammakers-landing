@@ -41,6 +41,19 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*------------------------------------*/
 
+%serif-title {
+	font-family: 'PT Serif', serif;
+	font-size: 48px;
+	margin: 70px 0;
+	width: 550px;
+	line-height: 140%;
+	color: #402B2B;
+  }
+
+%pop-title {
+	font-size: 26px;
+	font-weight: 500;
+}
 
 body {
   font-family: $font-stack;
@@ -213,8 +226,7 @@ footer {
 		align-items: center;
 		justify-content: center;
 		&__title {
-			font-size: 26px;
-			font-weight: 500;
+			@extend %pop-title;
 		}
 		&__text {
 			margin-top: 15px;
@@ -223,6 +235,7 @@ footer {
 	}
 	&-cards {
 		margin-top: 140px;
+		margin-bottom: 190px;
 		min-width: 260px;
 		display: flex;
 		flex-flow: row wrap;
@@ -257,7 +270,6 @@ footer {
 	}
 }
 .support {
-	margin-top: 190px;
 	margin-bottom: 110px;
 	display: flex;
 	&-disc {
@@ -266,8 +278,8 @@ footer {
 		justify-content: center;
 		padding-right: 20px;
 		&__title {
-			font-size: 26px;
-			font-weight: 500;
+			width: 500px;
+			@extend %pop-title;
 		}
 		&__text {
 			width: 450px;
@@ -283,12 +295,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	&__title {
-		font-family: 'PT Serif', serif;
-		font-size: 48px;
-		margin: 70px 0;
-		width: 550px;
-		line-height: 140%;
-		color: #402B2B;
+		@extend %serif-title;
 	}
 	&__video {
 		width: 100vw;
@@ -316,10 +323,7 @@ footer {
 		}
 	}
 	&__title {
-		font-family: 'PT Serif', serif;
-		font-size: 48px;
-		margin: 70px 0;
-		line-height: 140%;
+		@extend %serif-title;
 	}
 	&__item {
 		display: flex;
@@ -414,8 +418,7 @@ footer {
 			align-self: flex-end;
 		}
 		&__title {
-			font-size: 26px;
-			font-weight: 500;
+			@extend %pop-title;
 		}
 		&__text {
 			margin-top: 15px;
@@ -547,6 +550,66 @@ footer {
 			right: 0;
 			background-image: url(../img/arrow.svg);
 			border-radius: 50%;
+		}
+	}
+}
+
+.auth {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		@extend %serif-title;
+	}
+	&__block {
+		margin: 0 auto 130px auto;
+		width: 700px;
+		border-radius: 10px;
+		background-color: #fff;
+		padding: 100px 135px 50px 170px;
+		box-shadow: 0 20px 40px rgba($color: #9595C9, $alpha: 0.4);
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			.auth__text {
+				border: 1px solid #9595C9;
+				border-radius: 5px;
+				width: 400px;
+				height: 60px;
+				margin-bottom: 20px;
+				padding: 10px 40px;
+				font-size: 18px;
+				font-weight:300;
+				&:focus {
+					border: 2px solid #9595C9;
+					border-radius: 10px;
+					box-shadow: 0 20px 40px rgba($color: #9595C9, $alpha: 0.2);
+					font-weight:500;
+				}
+			}
+			.auth__label {
+				padding: 10px 0;
+				font-size: 16px;
+			}
+			.auth__button {
+				height: 60px;
+				width: 220px;
+				font-weight: 500;
+				font-size: 18px;
+				background-color:#9B9BCA;
+				border-radius: 10px;
+				color: white;
+				cursor: pointer;
+				margin-bottom: 30px;
+				transition: 0.4s ease-in;
+					&:hover {
+						background-color:#7e7eaf;
+				}
+			}
+			a {
+				color:#F01F35;
+				font-weight: 500;
+			}
 		}
 	}
 }
