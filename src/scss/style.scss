@@ -299,7 +299,7 @@ footer {
 		margin-top: 180px;
 	}
 	&__video {
-		width: 100vw;
+		width: 99vw;
 		transform: translateX(-50%);
 		position: relative;
 		left: 50%;
@@ -396,9 +396,9 @@ footer {
 }
 
 .background-features {
-	margin-top: 420px;
 	position: absolute;
 	right: 50%;
+	margin-top:330px;
 	z-index: -2;
 	overflow: hidden;
 }
@@ -482,19 +482,17 @@ footer {
 		justify-content: flex-end;
 		margin-bottom: 160px;
 		&__item {
-			margin: 30px 20px;
+			margin: 5px;
 			display: flex;
 			flex-flow:row wrap;
 			width: 500px;
 			padding: 10px 15px;
-			border-radius: 10px;
-			box-shadow: 0 20px 40px rgba($color: #EE4D47, $alpha: 0.1);
 			color: gray;
 			background: #fff;
 		}
 		&__text {
 			padding: 10px;
-			padding-right: 70px;
+			padding-right: 60px;
 		}
 		&__icon {
 			margin-top: 30px;
@@ -526,6 +524,8 @@ footer {
 	width: 500px;
 	left: 53%;
 	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 20px 40px rgba($color: #EE4D47, $alpha: 0.1);
 	}
 	/* Ограничивающая оболочка */
 	&-list {
@@ -534,7 +534,6 @@ footer {
 	/* Лента слайдов */
 	&-track{
 		display: flex;
-		align-items: flex-end;
 	}
 	&-arrow{
 		position: absolute;
@@ -543,7 +542,7 @@ footer {
 		font-size: 0;
 		width: 56px;
 		height: 56px;
-		margin-right:40px;
+		margin-right:10px;
 		&.slick-prev{
 			display: none;
 			opacity: 0;
