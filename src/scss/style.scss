@@ -62,8 +62,9 @@ body {
   background-color: #fff;;
   .container {
    margin: 0 auto;
-   width: 1080px;
+   max-width: 1080px;
    position: relative;
+   padding: 0 15px;
 
   }
   a {
@@ -95,7 +96,7 @@ body {
 		background-position: 0 0;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
-		height: 737px;
+		margin-bottom: 100px;
 	}
 
 	&-top {
@@ -107,7 +108,7 @@ body {
 	&-logo {
 		display: flex;
 		align-items: center;
-
+		margin-right: 130px;
 		&__image img{
 			width:72px;
 			height: 72px;
@@ -123,8 +124,10 @@ body {
 		font-size: 18px;
 		display: flex;
 		align-items: center;
+		width: 100%;
+	
+		justify-content: space-between;
 			&__link {
-				padding: 0 30px;
 			
 			}
 
@@ -139,16 +142,17 @@ body {
 		&__title {
 			font-family: 'DM Serif Display', serif;
 			font-size: 56px;
-			width: 550px;
+			width: 60%;
 			line-height: 100%;
 		}
 		&__text {
 			margin-top: 30px;
-			width: 750px;
+			width: 75%;
 		}
 		&__botton{
 			display: flex;
 			padding-top: 30px;
+			margin-bottom: 110px;
 		}
 	}
 }
@@ -158,14 +162,13 @@ footer {
 		display: flex;
 		flex-direction: column;
 		&-back {
-			height: 500px;
 			background-image: url(../img/footer.png);
-			background-position: 0 0;
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
 		}
 		&-nav {
 		padding-top: 177px;
+		padding-left: 50px;
 		display: flex;
 		justify-content: space-around;
 			&__column {
@@ -189,6 +192,7 @@ footer {
 		}
 		&-bottom {
 			margin-top: 77px;
+			margin-bottom: 36px;
 			height: 40px;
 			color: white;
 			display: flex;
@@ -200,12 +204,10 @@ footer {
 			font-weight:300;
 		}
 		&-social {
-			width: 170px;
 			display: flex;
 			justify-content: space-between;
-			position: relative;
-			left: 180px;
 			&__item{
+				padding-right: 10px;
 			svg:hover circle{
 				fill: rgba($color: #d3cada, $alpha: 1);
 			}
@@ -229,6 +231,7 @@ footer {
 			@extend %pop-title;
 		}
 		&__text {
+			width: 75%;
 			margin-top: 15px;
 			text-align: center;
 		}
@@ -277,17 +280,17 @@ footer {
 		flex-direction: column;
 		justify-content: center;
 		padding-right: 20px;
+		width: 50%;
 		&__title {
-			width: 500px;
 			@extend %pop-title;
 		}
 		&__text {
-			width: 450px;
 			padding-top: 15px;
 		}
 	}
 	&__image {
 		object-fit: contain;
+		width: 50%;
 	}
 }
 
@@ -346,7 +349,7 @@ footer {
 		flex-direction: column;
 		width: 100%;
 		margin-right: 15px;
-		margin-bottom: 12px;
+		margin-bottom: 20px;
 	}
 
 	&__answ {
@@ -358,7 +361,6 @@ footer {
 		box-shadow: 0 25px 60px rgba($color: #BFBFEC, $alpha: 0.7);
 			p {
 				padding: 35px;
-				
 			}
 	}
 	&__quest {
@@ -382,17 +384,17 @@ footer {
 			content: '\276F';
 			transform: rotate(90deg);
 			}
-	}
+		}
 	}
 	&__image {
 		position: absolute;
 		top: 0;
 		z-index: -1;
-		width: 110%;
 		height: 730px;
 	}
 	&__button {
 		margin: 100px 15px 110px 15px;
+		max-width: 100%;
 		&.btn a{
 			 padding: 25px 215px;
 			 font-weight: 500;
@@ -439,7 +441,7 @@ footer {
 		&__text {
 			margin-top: 15px;
 			text-align: center;
-			width: 660px;
+			width: 64%;
 		}
 	}
 	&-cards {
@@ -500,7 +502,6 @@ footer {
 			margin: 5px;
 			display: flex;
 			flex-flow:row wrap;
-			width: 500px;
 			padding: 10px 15px;
 			color: gray;
 			background: #fff;
@@ -536,7 +537,7 @@ footer {
 .slick {
 	&-slider{
 	min-width: 0;
-	width: 500px;
+	width: 47%;
 	left: 53%;
 	position: relative;
 	border-radius: 10px;
@@ -575,10 +576,11 @@ footer {
 	flex-direction: column;
 	&__title {
 		@extend %serif-title;
+		width: 55%;
 	}
 	&__block {
 		margin: 0 auto 130px auto;
-		width: 700px;
+		width: 70%;
 		border-radius: 10px;
 		background-color: #fff;
 		padding: 100px 135px 50px 170px;
@@ -590,7 +592,7 @@ footer {
 			.auth__text {
 				border: 1px solid #9595C9;
 				border-radius: 5px;
-				width: 400px;
+				width: 100%;
 				height: 60px;
 				margin-bottom: 20px;
 				padding: 10px 40px;
@@ -609,7 +611,7 @@ footer {
 			}
 			.auth__button {
 				height: 60px;
-				width: 220px;
+				width: 55%;
 				font-weight: 500;
 				font-size: 18px;
 				background-color:#9B9BCA;

@@ -107,8 +107,8 @@ const config = {
           to: "./img",
         },
         {
-          from: "./src/uploads",
-          to: "./uploads",
+          from: "./src/video",
+          to: "./video",
         },
       ],
     }),
