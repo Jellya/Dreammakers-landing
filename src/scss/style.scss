@@ -423,9 +423,16 @@ footer {
 	}
 	&__video {
 		width: 99vw;
+		height: 100vh;
 		transform: translateX(-50%);
 		position: relative;
 		left: 50%;
+		@media (max-width:992px) {
+			height: 50vh;
+		}
+		@media (max-width:767px) {
+			height: 40vh;
+		}
 	}
 }
 
