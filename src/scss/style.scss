@@ -50,20 +50,28 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		font-size: 36px;
 		width: 100%;	
 	}
+	@media (max-width:767px) {
+		font-size: 20px;			
+	}
   }
 
 %pop-title {
 	font-size: 26px;
 	font-weight: 500;
+	@media (max-width:767px) {
+		font-size: 20px;			
+	}
 }
-@media (max-width:992px) {
-		
-}
+
 body {
   font-family: $font-stack;
   color: #717784;
   position: relative;
-  background-color: #fff;;
+  background-color: #fff;
+	@media (max-width:767px) {
+		font-size: 14px;
+		line-height: 1.3rem;				
+	}
   .container {
    margin: 0 auto;
    max-width: 1080px;
@@ -91,6 +99,9 @@ body {
 		&:hover {
 			background-color:#7e7eaf;
 	}
+	@media (max-width:767px) {
+		padding: 10px 30px;			
+	}
   }
 }
 
@@ -105,6 +116,10 @@ body {
 		@media (max-width:1200px) {
 			background-size: auto;
 		}
+		@media (max-width:767px) {
+			padding-bottom: 50px;
+			margin-bottom: 50px;
+		}
 	}
 
 	&-top {
@@ -117,10 +132,17 @@ body {
 		display: flex;
 		align-items: center;
 		margin-right: 130px;
+		@media (max-width:767px) {
+			margin-right: 10px;		
+		}
 		&__image img{
 			width:72px;
 			height: 72px;
 			margin-right: 20px;
+			@media (max-width:767px) {
+				width: 60px;
+				height: 60px;			
+			}
 		}
 
 		&__text {
@@ -131,6 +153,9 @@ body {
 				background-color: rgba($color: #fff, $alpha: 0.8);
 				border-radius: 5px;
 				box-shadow: 0 0 5px rgba($color: #E0E0E0, $alpha: 1);
+			}
+			@media (max-width:767px) {
+				display: none;
 			}
 		}
 	}
@@ -150,12 +175,18 @@ body {
 				@media (max-width:1200px) {
 					padding: 15px 40px;
 				}
+				@media (max-width:767px) {
+					padding: 10px 30px;			
+				}
 			}
 	}
 	&-preview {
 	margin-top: 200px;
 	display: flex;
 	flex-direction: column;
+	@media (max-width:767px) {
+		margin-top: 100px;			
+	}
 		&__title {
 			font-family: 'DM Serif Display', serif;
 			font-size: 56px;
@@ -166,10 +197,14 @@ body {
 				width: 100%;
 				margin-bottom: 30px;
 			}
+			@media (max-width:767px) {
+				font-size: 34px;
+				margin-bottom: 0;			
+			}
 		}
 		&__text {
 			margin-top: 30px;
-			margin-bottom: 40px;
+			margin-bottom: 70px;
 			width: 75%;
 			@media (max-width:992px) {
 				text-align: justify;
@@ -177,10 +212,12 @@ body {
 			}
 		}
 		&__botton{
-			padding-top: 30px;
 			margin-bottom: 110px;
 			@media (max-width:992px) {
 				align-self: center;
+			}
+			@media (max-width:767px) {
+				margin-bottom: 40px;		
 			}
 		}
 	}
@@ -231,18 +268,30 @@ footer {
 			@media (max-width:992px) {
 				margin-bottom: 10px;
 			}
+			@media (max-width:767px) {
+				justify-content: space-around;
+			}
 		}
 		&-copyright {
 			font-weight:300;
+			@media (max-width:767px) {
+				display: none;
+			}
 		}
 		&-social {
 			display: flex;
 			justify-content: space-between;
 			&__item{
 				padding-right: 10px;
-			svg:hover circle{
-				fill: rgba($color: #d3cada, $alpha: 1);
-			}
+				svg:hover circle{
+					fill: rgba($color: #d3cada, $alpha: 1);
+				}
+				svg	{ 
+					@media (max-width:767px) {
+					width: 30px;
+					height: 30px;
+				}
+				}
 			}
 		}
 		&-logo {
@@ -253,13 +302,15 @@ footer {
 }
 
 .service {
-	padding-top: 95px;
 	&-disc {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 140px;
+		@media (max-width:767px) {
+			margin-bottom: 30px;		
+		}
 		&__title {
 			@extend %pop-title;
 			margin-bottom: 15px;
@@ -278,6 +329,9 @@ footer {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-evenly;
+		@media (max-width:767px) {
+			margin-bottom: 70px;
+		}
 		&__item {
 			display: flex;
 			flex-direction: column;
@@ -290,20 +344,37 @@ footer {
 			&:hover{
 				box-shadow: 1px 7px 3px -1px #717784, 0 0 3px 1px #717784 ;
 			}
+			@media (max-width:767px) {
+				padding: 10px;
+				width: 150px;		
+			}
 		}
 		&__image {
 			margin: 20px;
+			height: 50px;
+			width: 50px;
+			@media (max-width:767px) {
+				margin: 10px;		
+			}
 		}
 		&__title {
 			width: 100%;
 			font-size: 22px;
 			font-weight: 500;
+			@media (max-width:767px) {
+				font-size: 16px;	
+			}
 		}
 		&__text {
 			width: 100%;
 			margin-top: 15px;
 			font-size: 16px;
 			line-height: 20px;
+			@media (max-width:767px) {
+				font-size: 14px;
+				margin-top: 10px;
+				display: none;	
+			}
 		}
 	}
 }
@@ -345,18 +416,28 @@ footer {
 	&__title {
 		@extend %serif-title;
 		margin-top: 180px;
+		@media (max-width:767px) {
+			margin-top: 70px;
+			margin-bottom: 10px;	
+		}
 	}
 	&__video {
 		width: 99vw;
+		height: 100vh;
 		transform: translateX(-50%);
 		position: relative;
 		left: 50%;
+		@media (max-width:992px) {
+			height: 50vh;
+		}
+		@media (max-width:767px) {
+			height: 40vh;
+		}
 	}
 }
 
 .FAQ {
 	display: flex;
-	padding-top: 250px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -375,14 +456,20 @@ footer {
 		padding: 0 15px;
 		width: 50%;
 		&:nth-child(2) {
-			padding-top: 380px;
+			padding-top: 590px;
 			flex-direction: column;
 			@media (max-width:992px) {
 				padding-top: 0;
 			}
+			@media (max-width:767px) {
+				display: none;
+			}
 		}
 		@media (max-width:992px) {
 			width: 100%;
+		}
+		@media (max-width:767px) {
+			padding: 0;
 		}
 	}
 	&__loadmore {
@@ -400,6 +487,9 @@ footer {
 	}
 	&__title {
 		@extend %serif-title;
+		@media (max-width:767px) {
+			margin-bottom: 30px;	
+		}
 	}
 	&__item {
 		display: flex;
@@ -407,6 +497,10 @@ footer {
 		width: 100%;
 		margin-right: 15px;
 		margin-bottom: 20px;
+		@media (max-width:767px) {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__answ {
@@ -418,12 +512,16 @@ footer {
 		box-shadow: 0 25px 60px rgba($color: #BFBFEC, $alpha: 0.7);
 			p {
 				padding: 35px;
+				@media (max-width:767px) {
+					padding: 15px;	
+				}
 			}
+		
 	}
 	&__quest {
 		text-align: left;
 		z-index: 5;
-		padding: 35px ;
+		padding: 35px;
 		font-size: 18px;
 		border-radius: 23px;
 		background-color: white;
@@ -441,6 +539,10 @@ footer {
 			content: '\276F';
 			transform: rotate(90deg);
 			}
+		}
+		@media (max-width:767px) {
+			font-size: 14px;
+			padding: 15px;	
 		}
 	}
 	&__image {
@@ -494,10 +596,17 @@ footer {
 		align-items: center;
 		justify-content: center;
 		margin-top: 90px;
+		@media (max-width:767px) {
+			margin-top: 70px;	
+		}
 		&:nth-child(3) {
 			margin-top: 240px;
 			margin-bottom: 100px;
 			align-self: flex-end;
+			@media (max-width:767px) {
+				margin-top: 60px;
+				margin-bottom: 20px;
+				}
 		}
 		&__title {
 			@extend %pop-title;
@@ -506,6 +615,9 @@ footer {
 			margin-top: 15px;
 			text-align: center;
 			width: 64%;
+			@media (max-width:767px) {
+				width: 100%;	
+				}
 		}
 	}
 	&-cards {
@@ -517,6 +629,9 @@ footer {
 		flex-flow: row wrap;
 		@media (max-width:992px) {
 			margin-top: 60px;
+		}
+		@media (max-width:767px) {
+			margin-top: 0;	
 		}
 		&__item {
 			margin-top: 60px;
@@ -531,6 +646,11 @@ footer {
 			@media (max-width:992px) {
 				padding: 30px;
 				width: 45%;
+			}
+			@media (max-width:767px) {
+				max-width: 290px;
+				width: 90%;
+
 			}
 		}
 		&__title {
@@ -550,6 +670,9 @@ footer {
 				font-size: 16px;
 				margin-bottom: 20px;
 			}
+			@media (max-width:767px) {
+				font-size: 14px;		
+			}
 		}
 		&__button1,&__button2 {
 			position: absolute;
@@ -557,6 +680,14 @@ footer {
 			bottom: -15px;
 			@media (max-width:992px) {
 				left: 14%;
+			}
+			@media (max-width:767px) {
+				left: 25%;
+			}	
+			&.btn a {
+				@media (max-width:767px) {
+				font-size: 14px;
+				}
 			}
 		}
 		&__button2 {
@@ -583,6 +714,9 @@ footer {
 		flex-flow:row wrap;
 		justify-content: flex-end;
 		margin-bottom: 160px;
+		@media (max-width:767px) {
+			margin-bottom: 0;
+			}
 		&__item {
 			margin: 5px;
 			display: flex;
@@ -594,6 +728,9 @@ footer {
 		&__text {
 			padding: 10px;
 			padding-right: 60px;
+			@media (max-width:767px) {
+				padding-right: 40px;
+				}
 		}
 		&__icon {
 			margin-top: 30px;
@@ -602,17 +739,32 @@ footer {
 			box-shadow: 2px 8px 15px rgba($color: #939393, $alpha: 0.25);
 			height: 100px;
 			width: 100px;
+			@media (max-width:767px) {
+				width: 50px;
+				height: 50px;
+				margin-top: 10px;
+				}
 		}
 		&__name {
 			font-weight: 600;
 			margin-top: 50px;
 			height: 25px;
+			@media (max-width:767px) {
+			margin-top: 5px;
+			height: 20px;
+			}
 		}
 		&__rating {
 			padding: 10px 50px;
+			@media (max-width:767px) {
+				padding: 0 10px;
+				}
 		}
 		&__stars {
 			margin-top: -10px;
+			@media (max-width:767px) {
+				margin-top: -5px;
+				}
 		}
 	}
 
@@ -630,7 +782,11 @@ footer {
 	@media (max-width:992px) {
 		width: 80%;
 		left: 12%;
-	}
+		}
+	@media (max-width:767px) {
+		width: 100%;
+		left: 0;	
+		}
 	}
 	/* Ограничивающая оболочка */
 	&-list {
@@ -669,6 +825,9 @@ footer {
 		@media (max-width:992px) {
 			width: 100%;
 		}
+		@media (max-width:767px) {
+			margin-bottom: 30px;
+		}
 	}
 	&__block {
 		margin: 0 auto 130px auto;
@@ -679,6 +838,12 @@ footer {
 		box-shadow: 0 20px 40px rgba($color: #9595C9, $alpha: 0.4);
 		@media (max-width:992px) {
 			padding: 60px;
+		}
+		@media (max-width:767px) {
+			width: 90%;
+			max-width: 290px;
+			padding: 20px;
+			margin-bottom: 70px;
 		}
 		form {
 			display: flex;
@@ -698,6 +863,11 @@ footer {
 					box-shadow: 0 20px 40px rgba($color: #9595C9, $alpha: 0.2);
 					font-weight:500;
 				}
+				@media (max-width:767px) {
+					margin-bottom: 10px;
+					font-size: 14px;
+					padding: 10px;
+				}
 			}
 			.auth__label {
 				padding: 10px 0;
@@ -716,6 +886,13 @@ footer {
 				transition: 0.4s ease-in;
 					&:hover {
 						background-color:#7e7eaf;
+				}
+				@media (max-width:767px) {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					height: 40px;
+					width: 50%;
+					font-size: 16px;
 				}
 			}
 			a {
